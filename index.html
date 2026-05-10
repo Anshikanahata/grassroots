@@ -510,14 +510,16 @@
         <div class="field"><label for="org">Organisation / Company</label><input type="text" id="org" placeholder="Your firm or company"></div>
         <div class="field form-full">
           <label for="role">Investor Type</label>
-          <select id="role" required>
+          <select id="role">
             <option value="" disabled selected>Select one...</option>
-            <option>Financial Adviser</option>
-            <option>CIO / Chief Investment Officer</option>
-            <option>Family Office</option>
-            <option>Investment Consultant</option>
-            <option>HNW Investor</option>
-            <option>Other</option>
+            <option value="financial_adviser">Financial Adviser</option>
+            <option value="cio">CIO / Chief Investment Officer</option>
+            <option value="family_office">Family Office</option>
+            <option value="investment_consultant">Investment Consultant</option>
+            <option value="wealth_advice_practitioner">Wealth Advice Practitioner</option>
+            <option value="hnw_investor">HNW / Private Investor</option>
+            <option value="fund_manager">Fund Manager</option>
+            <option value="other">Other</option>
           </select>
         </div>
         <div class="field form-full"><label for="notes">What draws you to India as an investment destination? (optional)</label><textarea id="notes" placeholder="Share any thoughts or questions you have about the 2027 tour…"></textarea></div>
@@ -642,7 +644,7 @@
       { name: "email",                    value: email },
       { name: "phone",                    value: phone },
       { name: "company",                  value: org   },
-      { name: "jobtitle",                 value: role  },
+      { name: "investor_type",             value: role  },
       { name: "message",                  value: notes },
       { name: "grassroots_tour_interest", value: "Tour VII — Delegate Interest" }
     ],
